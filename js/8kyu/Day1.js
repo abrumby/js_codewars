@@ -7,8 +7,7 @@ function reverseString(str){
 
 //https://www.codewars.com/kata/55fab1ffda3e2e44f00000c6
 function cockroachSpeed(s) {
-    let result = Math.floor(s * 27.7778)
-    return result
+    return Math.floor(s * 27.7778)
 }
 
 //https://www.codewars.com/kata/577ff15ad648a14b780000e7
@@ -22,7 +21,6 @@ function greet(language) {
     }
     return 'Welcome'
 }
-
 let languages = [
     { language: 'english', greeting: 'Welcome'},
     { language: 'czech', greeting: 'Vitejte'},
@@ -48,4 +46,12 @@ function isPalindrome(x) {
     return x.toLowerCase() === reverseString(x.toLowerCase())
 }
 
-export {reverseString, cockroachSpeed, greet, isPalindrome}
+//https://www.codewars.com/kata/55cbc3586671f6aa070000fb
+function checkForFactor (base, factor) {
+    return base % factor === 0
+}
+
+export {
+    reverseString, cockroachSpeed, greet,
+    isPalindrome, checkForFactor
+}

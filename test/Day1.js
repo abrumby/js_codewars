@@ -1,6 +1,8 @@
 import { assert } from 'chai'
-import { expect } from 'chai'
-import {reverseString, cockroachSpeed, greet, isPalindrome} from '../js/8kyu/Day1.js'
+import {
+    reverseString, cockroachSpeed, greet,
+    isPalindrome, checkForFactor
+} from '../js/8kyu/Day1.js'
 
 
 describe("Reverse string tests", () => {
@@ -10,7 +12,7 @@ describe("Reverse string tests", () => {
         assert.strictEqual(reverseString(''), '')
         assert.strictEqual(reverseString('h'), 'h')
     });
-});
+})
 
 describe("Cockroach Tests", function() {
     it("Testing for fixed tests", () => {
@@ -18,7 +20,7 @@ describe("Cockroach Tests", function() {
         assert.strictEqual(cockroachSpeed(1.09), 30);
         assert.strictEqual(cockroachSpeed(0), 0);
     });
-});
+})
 
 describe("Greeting Tests", () => {
     it("test", () => {
@@ -26,7 +28,7 @@ describe("Greeting Tests", () => {
         assert.strictEqual(greet('dutch'), 'Welkom', "Your function should have returned 'Welkom'. Try again.");
         assert.strictEqual(greet('IP_ADDRESS_INVALID'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
     });
-});
+})
 
 describe("isPalindrome Tests", function() {
     it("Testing for 'a'", () => assert.strictEqual(isPalindrome("a"), true));
@@ -37,4 +39,19 @@ describe("isPalindrome Tests", function() {
     it("Testing for 'Madam'", () => assert.strictEqual(isPalindrome("Madam"), true));
     it("Testing for 'AbBa'", () => assert.strictEqual(isPalindrome("AbBa"), true));
     it("Testing for ''", () => assert.strictEqual(isPalindrome(""), true));
-});
+})
+
+describe('check for factor', function () {
+    it('should return true', function () {
+        assert.strictEqual(checkForFactor(10,2), true)
+        assert.strictEqual(checkForFactor(63,7), true)
+        assert.strictEqual(checkForFactor(2450,5), true)
+        assert.strictEqual(checkForFactor(24612,3), true)
+    })
+    it('should return false', function () {
+        assert.strictEqual(checkForFactor(9,2), false)
+        assert.strictEqual(checkForFactor(653,7), false)
+        assert.strictEqual(checkForFactor(2453,5), false)
+        assert.strictEqual(checkForFactor(24617,3), false)
+    })
+})
