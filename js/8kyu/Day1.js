@@ -51,7 +51,15 @@ function checkForFactor (base, factor) {
     return base % factor === 0
 }
 
+//https://www.codewars.com/kata/57ee4a67108d3fd9eb0000e7
+function gooseFilter (birds) {
+    let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    let result = birds.filter( ( el ) => !geese.includes( el ) );
+    console.log(result)
+    return result
+}
+
 export {
     reverseString, cockroachSpeed, greet,
-    isPalindrome, checkForFactor
+    isPalindrome, checkForFactor, gooseFilter
 }
