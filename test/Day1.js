@@ -1,7 +1,8 @@
 import { assert } from 'chai'
 import {
     reverseString, cockroachSpeed, greet,
-    isPalindrome, checkForFactor, gooseFilter
+    isPalindrome, checkForFactor, gooseFilter,
+    Kata, zeroFuel
 } from '../js/8kyu/Day1.js'
 
 
@@ -65,5 +66,19 @@ describe("gooseFilter",function(){
     });
     it("All geese",function(){
         assert.deepEqual(gooseFilter(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]),[]);
+    });
+});
+
+describe("Kata.getVolumeOfCuboid", () => {
+    it("test", () => {
+        assert.equal(Kata.getVolumeOfCuboid(1,2,2), 4);
+        assert.equal(Kata.getVolumeOfCuboid(6.3,2,5), 63);
+    });
+});
+
+describe("zeroFill", function() {
+    it("Sample Tests", function() {
+        assert.equal(zeroFuel(50, 25, 2), true);
+        assert.equal(zeroFuel(100, 50, 1), false);
     });
 });

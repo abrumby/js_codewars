@@ -57,7 +57,20 @@ function gooseFilter (birds) {
     return birds.filter( ( el ) => !geese.includes( el ) );
 }
 
+//https://www.codewars.com/kata/58261acb22be6e2ed800003a
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height
+    }
+}
+
+//https://www.codewars.com/kata/5861d28f124b35723e00005e
+function zeroFuel(distanceToPump, mpg, fuelLeft) {
+    return fuelLeft >= (distanceToPump/mpg)
+};
+
 export {
     reverseString, cockroachSpeed, greet,
-    isPalindrome, checkForFactor, gooseFilter
+    isPalindrome, checkForFactor, gooseFilter,
+    Kata, zeroFuel
 }
