@@ -95,6 +95,5 @@ function max(list){
 export {
     reverseString, cockroachSpeed, greet,
     isPalindrome, checkForFactor, gooseFilter,
-    Kata, zeroFuel, countSheep, min, max,
-    splitStrings
+    Kata, zeroFuel, countSheep, min, max
 }
