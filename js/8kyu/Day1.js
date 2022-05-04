@@ -69,8 +69,17 @@ function zeroFuel(distanceToPump, mpg, fuelLeft) {
     return fuelLeft >= (distanceToPump/mpg)
 };
 
+//https://www.codewars.com/kata/5b077ebdaf15be5c7f000077
+function countSheep (num){
+    let result = ''
+    for (let i = 1; i <= num; i++) {
+        result = result + `${i} sheep...`
+    }
+    return result
+}
+
 export {
     reverseString, cockroachSpeed, greet,
     isPalindrome, checkForFactor, gooseFilter,
-    Kata, zeroFuel
+    Kata, zeroFuel, countSheep
 }

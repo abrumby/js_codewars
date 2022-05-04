@@ -2,7 +2,7 @@ import { assert } from 'chai'
 import {
     reverseString, cockroachSpeed, greet,
     isPalindrome, checkForFactor, gooseFilter,
-    Kata, zeroFuel
+    Kata, zeroFuel, countSheep
 } from '../js/8kyu/Day1.js'
 
 
@@ -80,5 +80,14 @@ describe("zeroFill", function() {
     it("Sample Tests", function() {
         assert.equal(zeroFuel(50, 25, 2), true);
         assert.equal(zeroFuel(100, 50, 1), false);
+    });
+});
+
+describe("Fixed tests", () => {
+    it("Testing for fixed tests", () => {
+        assert.strictEqual(countSheep(0), "");
+        assert.strictEqual(countSheep(1), "1 sheep...");
+        assert.strictEqual(countSheep(2), "1 sheep...2 sheep...");
+        assert.strictEqual(countSheep(3), "1 sheep...2 sheep...3 sheep...");
     });
 });
