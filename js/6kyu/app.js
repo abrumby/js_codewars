@@ -39,6 +39,15 @@ function findOutlier(integers){
     return odds.length < evens.length ? odds[0] : evens[0]
 }
 
+//https://www.codewars.com/kata/556deca17c58da83c00002db
+//0,1,1,2,4,7,13,24,44,81,149
+function tribonacci(signature, n) {
+    if (n > 3) {
+        let s = tribonacci(signature, n - 1);
+        return [...s, s[s.length - 1] + s[s.length - 2] + s[s.length - 3]];
+    } else return signature.slice(0, n);
+}
+
 export {
-    splitStrings, moveZeros, isPrime, findOutlier
+    splitStrings, moveZeros, isPrime, findOutlier, tribonacci
 }
