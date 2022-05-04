@@ -1,6 +1,6 @@
 import { assert } from 'chai'
 import {
-    splitStrings, moveZeros, isPrime, findOutlier, tribonacci
+    splitStrings, moveZeros, isPrime, findOutlier, tribonacci, humanReadable
 } from '../js/6kyu/app.js'
 
 describe("Split Strings", () => {
@@ -75,3 +75,18 @@ describe("tribonnaci tests",function(){
     assert.deepStrictEqual(tribonacci([300,200,100],0),[])
     //assert.deepStrictEqual(tribonacci([0.5,0.5,0.5],30),[0.5,0.5,0.5,1.5,2.5,4.5,8.5,15.5,28.5,52.5,96.5,177.5,326.5,600.5,1104.5,2031.5,3736.5,6872.5,12640.5,23249.5,42762.5,78652.5,144664.5,266079.5,489396.5,900140.5,1655616.5,3045153.5,5600910.5,10301680.5])
 })
+
+describe('humanReadable', function() {
+    it('should format correctly', function() {
+        assert.strictEqual(humanReadable(0), '00:00:00', 'humanReadable(0)');
+        assert.strictEqual(humanReadable(59), '00:00:59', 'humanReadable(59)');
+        assert.strictEqual(humanReadable(60), '00:01:00', 'humanReadable(60)');
+        assert.strictEqual(humanReadable(90), '00:01:30', 'humanReadable(90)');
+        assert.strictEqual(humanReadable(3599), '00:59:59', 'humanReadable(3599)');
+        assert.strictEqual(humanReadable(3600), '01:00:00', 'humanReadable(3600)');
+        assert.strictEqual(humanReadable(45296), '12:34:56', 'humanReadable(45296)');
+        assert.strictEqual(humanReadable(86399), '23:59:59', 'humanReadable(86399)');
+        assert.strictEqual(humanReadable(86400), '24:00:00', 'humanReadable(86400)');
+        assert.strictEqual(humanReadable(359999), '99:59:59', 'humanReadable(359999)');
+    });
+});
