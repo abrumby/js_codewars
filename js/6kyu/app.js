@@ -30,8 +30,13 @@ function isPrime(num) {
 
 //https://www.codewars.com/kata/5526fc09a1bbd946250002dc
 function findOutlier(integers){
-    //your code here
-    return integers[0]
+    let odds = integers.filter(number => {
+        return number % 2 !== 0
+    });
+    let evens = integers.filter(number => {
+        return number % 2 === 0
+    })
+    return odds.length < evens.length ? odds[0] : evens[0]
 }
 
 export {

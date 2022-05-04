@@ -55,10 +55,10 @@ describe("Basic", ()=>{
 
 describe("findOutlierTest", () => {
     it("Basic Tests", () => {
-        assert.equal(findOutlier([0, 1, 2]), 1)
-        assert.equal(findOutlier([1, 2, 3]), 2)
-        assert.equal(findOutlier([2,6,8,10,3]), 3)
-        assert.equal(findOutlier([0,0,3,0,0]), 3)
-        assert.equal(findOutlier([1,1,0,1,1]), 0)
+        assert.equal(findOutlier([0, 1, 2]), 1, 'test 1')
+        assert.equal(findOutlier([1, 2, 3]), 2, 'test 2')
+        assert.equal(findOutlier([2,6,8,10,3]), 3, 'test 3')
+        assert.equal(findOutlier([0,0,3,0,0]), 3, 'test 4')
+        assert.equal(findOutlier([1,1,0,1,1]), 0, 'test 5')
     });
 });
