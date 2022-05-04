@@ -2,7 +2,8 @@ import { assert } from 'chai'
 import {
     reverseString, cockroachSpeed, greet,
     isPalindrome, checkForFactor, gooseFilter,
-    Kata, zeroFuel, countSheep
+    Kata, zeroFuel, countSheep, min, max,
+    splitStrings
 } from '../js/8kyu/Day1.js'
 
 
@@ -83,11 +84,28 @@ describe("zeroFill", function() {
     });
 });
 
-describe("Fixed tests", () => {
-    it("Testing for fixed tests", () => {
+describe("Count Sheep tests", () => {
+    it("Testing for count sheep", () => {
         assert.strictEqual(countSheep(0), "");
         assert.strictEqual(countSheep(1), "1 sheep...");
         assert.strictEqual(countSheep(2), "1 sheep...2 sheep...");
         assert.strictEqual(countSheep(3), "1 sheep...2 sheep...3 sheep...");
+    });
+});
+
+describe("MinMaxTests", function(){
+    it("MinMax", function(){
+        assert.equal(min([-52, 56, 30, 29, -54, 0, -110]), -110);
+        assert.equal(min([42, 54, 65, 87, 0]), 0);
+        assert.equal(max([4,6,2,1,9,63,-134,566]), 566);
+        assert.equal(max([5]), 5);
+    });
+});
+
+describe("Split Strings", () => {
+    it("Basic tests", () => {
+        assert.deepEqual(splitStrings("abcdef"), ["ab", "cd", "ef"]);
+        assert.deepEqual(splitStrings("abcdefg"), ["ab", "cd", "ef", "g_"]);
+        assert.deepEqual(splitStrings(""), []);
     });
 });

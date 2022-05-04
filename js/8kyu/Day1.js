@@ -67,7 +67,7 @@ class Kata {
 //https://www.codewars.com/kata/5861d28f124b35723e00005e
 function zeroFuel(distanceToPump, mpg, fuelLeft) {
     return fuelLeft >= (distanceToPump/mpg)
-};
+}
 
 //https://www.codewars.com/kata/5b077ebdaf15be5c7f000077
 function countSheep (num){
@@ -78,8 +78,33 @@ function countSheep (num){
     return result
 }
 
+//https://www.codewars.com/kata/577a98a6ae28071780000989
+function min(list){
+    let newList = list.sort(function(a, b) {
+        return a - b;
+    });
+    return newList[0];
+}
+function max(list){
+    let newList = list.sort(function(a, b) {
+        return b - a;
+    });
+    return newList[0]
+}
+
+//https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+function splitStrings(str){
+    if (str.length === 0) {
+        return [];
+    }
+    return str.match(/.{1,2}/g).map((out) => {
+        return out.length % 2 ? out + '_' : out;
+    });
+}
+
 export {
     reverseString, cockroachSpeed, greet,
     isPalindrome, checkForFactor, gooseFilter,
-    Kata, zeroFuel, countSheep
+    Kata, zeroFuel, countSheep, min, max,
+    splitStrings
 }
