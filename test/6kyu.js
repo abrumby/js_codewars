@@ -7,6 +7,7 @@ import {
   tribonacci,
   humanReadable,
   comp,
+  findMissingLetter
 } from "../js/6kyu/app.js";
 
 describe("Split Strings", () => {
@@ -136,5 +137,12 @@ describe("comp Tests", () => {
     let a1 = [121, 144, 19, 161, 19, 144, 19, 11];
     let a2 = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19];
     assert.equal(comp(a1, a2), true, 'Test 1');
+  });
+});
+
+describe("findMissingLetter Tests", function(){
+  it("findMissingLetter", function(){
+    assert.equal(findMissingLetter(['a','b','c','d','f']), 'e');
+    assert.equal(findMissingLetter(['O','Q','R','S']), 'P');
   });
 });
