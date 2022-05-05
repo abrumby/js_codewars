@@ -67,6 +67,12 @@ function humanReadable(seconds) {
   return hours + ":" + minutes + ":" + seconds;
 }
 
+//https://www.codewars.com/kata/550498447451fbbd7600041c //Are they the "same"?
+function comp(array1, array2) {
+  if (!array1 || !array2) return false;
+  return array1.map(x => x * x).sort().toString() === array2.sort().toString();
+}
+
 export {
   splitStrings,
   moveZeros,
@@ -74,4 +80,5 @@ export {
   findOutlier,
   tribonacci,
   humanReadable,
+  comp,
 };
