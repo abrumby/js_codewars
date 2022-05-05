@@ -17,4 +17,16 @@ function validParentheses(parens) {
   return stack.length === 0;
 }
 
-export { validParentheses };
+//https://www.codewars.com/kata/5541f58a944b85ce6d00006a
+function productFib(prod){
+  let n = 0;
+  let nPlus = 1;
+  while(n*nPlus < prod) {
+    nPlus = n + nPlus;
+    n = nPlus - n;
+  }
+  return [n, nPlus, n*nPlus===prod];
+}
+
+
+export { validParentheses, productFib };

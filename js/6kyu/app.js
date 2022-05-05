@@ -73,6 +73,19 @@ function comp(array1, array2) {
   return array1.map(x => x * x).sort().toString() === array2.sort().toString();
 }
 
+//https://www.codewars.com/kata/5839edaa6754d6fec10000a2/
+function findMissingLetter(array)
+{
+  if(!array || array.length < 1)
+    return ''
+  for (let i = 1; i < array.length; i++) {
+    let prev = array[i -1].charCodeAt()
+    let current = array[i].charCodeAt()
+    if(current - prev !== 1)
+      return String.fromCharCode(prev + 1)
+  }
+}
+
 export {
   splitStrings,
   moveZeros,
@@ -81,4 +94,5 @@ export {
   tribonacci,
   humanReadable,
   comp,
+  findMissingLetter
 };
